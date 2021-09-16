@@ -162,7 +162,8 @@
     ---数据库中查看更新是否生效
 
 ## django使用mysql数据库
-    ---DATABASES = {
+    ---数据库信息配置
+    DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',  
         'NAME':'********',
@@ -175,4 +176,11 @@
 
 
 ## django将数据库中已有表导入
-    
+    ---反向生成models
+    python manage.py inspectdb 数据库中表名）>  到哪个app下的models.py
+    python manage.py inspectdb home > ajk/models.py
+
+    ---数据迁移
+    python manage.py makemigrations
+    python manage.py migrate
+

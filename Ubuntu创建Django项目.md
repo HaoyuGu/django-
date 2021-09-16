@@ -159,4 +159,16 @@
             stu=student.objects.get(pk=3)
             stu.delete()
             return HttpResponse('student delete success')
-    ---数据库中查看更新是否生效	
+    ---数据库中查看更新是否生效
+
+## django使用mysql数据库
+    ---DATABASES = {
+    'default': {
+        'ENGINE':'django.db.backends.mysql',  
+        'NAME':'********',
+        'USER':'********',
+        'PASSWORD':'********',
+        'HOST':'********',
+        'PORT':'3306',
+    }
+}
